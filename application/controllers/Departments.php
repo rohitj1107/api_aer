@@ -34,7 +34,7 @@ class Departments extends REST_Controller{
         if($data){
             $this->response(['Departments updated successfully.'], REST_Controller::HTTP_CREATED);
         } else {
-            $this->response(['Not created.'], REST_Controller::HTTP_NO_CONTENT);
+            $this->response(['Not Update.'], REST_Controller::HTTP_NO_CONTENT);
         }
     }
 
@@ -45,7 +45,7 @@ class Departments extends REST_Controller{
         if($data){
             $this->response(['Departments Delete successfully.'], REST_Controller::HTTP_CREATED);
         } else {
-            $this->response(['Not created.'], REST_Controller::HTTP_NO_CONTENT);
+            $this->response(['Not Deleted.'], REST_Controller::HTTP_NO_CONTENT);
         }
     }
 }
