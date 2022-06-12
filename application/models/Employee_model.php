@@ -46,13 +46,12 @@ class Employee_model extends CI_Model{
         if(!empty($name)){
             $this->db->select('*');
             $this->db->from('Employee');
+            $this->db->join('Departments', 'Employee.e_d_id = Departments.d_id');
             $this->db->like('e_name',$name);
             $data = $this->db->get()->result();
         }else{
             $data = $this->db->get("Employee")->result();
         }
-        $fp = fopen('/Users/rohitjadhav/Downloads/test.txt','a');
-fwrite($fp,print_r($data,1)."\n");
         return $data;
     }
 }
